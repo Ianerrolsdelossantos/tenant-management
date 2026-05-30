@@ -10,22 +10,18 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +60,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(284, 39);
             this.txtUsername.TabIndex = 8;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -75,7 +70,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(284, 39);
             this.txtPassword.TabIndex = 11;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -92,8 +87,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(431, 474);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(331, 54);
@@ -109,11 +106,11 @@
             this.pictureBox1.Image = global::tenant_management.Properties.Resources.admin__1_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1184, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(1184, 233);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pictureBox4
             // 
@@ -122,7 +119,7 @@
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
@@ -131,7 +128,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(466, 336);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(296, 58);
-            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox3
@@ -141,7 +138,7 @@
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
@@ -150,15 +147,16 @@
             this.pictureBox2.Location = new System.Drawing.Point(466, 269);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(296, 58);
-            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
             // AdminLogin
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(1184, 561);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -188,6 +186,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -200,4 +199,3 @@
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
-
